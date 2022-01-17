@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/select_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:text="选择视频"
+        app:layout_constraintRight_toLeftOf="@id/guide_line"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="开始处理"
+        app:layout_constraintLeft_toRightOf="@id/guide_line"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/video_width_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:hint="视频宽"
+        app:layout_constraintRight_toLeftOf="@id/guide_line"
+        app:layout_constraintTop_toBottomOf="@id/select_btn" />
+
+    <EditText
+        android:id="@+id/video_height_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:hint="视频高"
+        app:layout_constraintLeft_toRightOf="@id/guide_line"
+        app:layout_constraintTop_toBottomOf="@id/select_btn" />
+
+    <TextView
+        android:id="@+id/input_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="input:"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/select_btn"
+        app:layout_constraintTop_toBottomOf="@id/video_width_et" />
+
+    <TextView
+        android:id="@+id/input_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintLeft_toRightOf="@id/input_label"
+        app:layout_constraintTop_toTopOf="@id/input_label" />
+
+    <TextView
+        android:id="@+id/output_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="output:"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/input_label"
+        app:layout_constraintTop_toBottomOf="@id/input_label" />
+
+    <TextView
+        android:id="@+id/output_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintLeft_toRightOf="@id/output_label"
+        app:layout_constraintTop_toTopOf="@id/output_label" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:max="100"
+        app:layout_constraintTop_toBottomOf="@id/output_label" />
+
+    <TextView
+        android:id="@+id/progress_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progress" />
+
+    <TextView
+        android:id="@+id/cost_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/output_label"
+        app:layout_constraintTop_toBottomOf="@id/progress_tv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
