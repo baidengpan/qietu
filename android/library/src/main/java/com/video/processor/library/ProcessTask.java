@@ -36,6 +36,7 @@ public class ProcessTask implements Runnable {
         long handle = jniInterface.init();
         if (handle == 0) {
             callback.finish(false);
+            return;
         }
         int status = jniInterface.open(
                 config.inputVideoPath,
@@ -48,11 +49,10 @@ public class ProcessTask implements Runnable {
                 config.source);
         if (status != 0) {
             callback.finish(false);
+            return;
         }
-        if (handle != 0) {
-            jniInterface.process(this);
-            jniInterface.close();
-            callback.finish(true);
-        }
+        jniInterface.process(this);
+        jniInterface.close();
+        callback.finish(true);
     }
 }
