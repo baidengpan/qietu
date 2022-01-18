@@ -1,0 +1,790 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06182682278D3B9A006FD930 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06182681278D3B9A006FD930 /* VideoToolbox.framework */; };
+		06182686278D3D31006FD930 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 06182685278D3D31006FD930 /* libbz2.tbd */; };
+		06182688278D3D40006FD930 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 06182687278D3D40006FD930 /* libiconv.tbd */; };
+		063095732787078A00587B7E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 063095722787078A00587B7E /* AppDelegate.m */; };
+		063095762787078A00587B7E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 063095752787078A00587B7E /* SceneDelegate.m */; };
+		063095792787078A00587B7E /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 063095782787078A00587B7E /* ViewController.mm */; };
+		0630957C2787078A00587B7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0630957A2787078A00587B7E /* Main.storyboard */; };
+		0630957E2787078C00587B7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0630957D2787078C00587B7E /* Assets.xcassets */; };
+		063095812787078C00587B7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0630957F2787078C00587B7E /* LaunchScreen.storyboard */; };
+		063095842787078C00587B7E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 063095832787078C00587B7E /* main.m */; };
+		0630958E2787078C00587B7E /* EdfuVideoHandlerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0630958D2787078C00587B7E /* EdfuVideoHandlerTests.m */; };
+		063095982787078D00587B7E /* EdfuVideoHandlerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 063095972787078D00587B7E /* EdfuVideoHandlerUITests.m */; };
+		0630959A2787078D00587B7E /* EdfuVideoHandlerUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 063095992787078D00587B7E /* EdfuVideoHandlerUITestsLaunchTests.m */; };
+		064ED6AF278D3F5100A95FFE /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06182691278D3E59006FD930 /* libavcodec.a */; };
+		064ED6B0278D3F5100A95FFE /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06182695278D3E59006FD930 /* libavdevice.a */; };
+		064ED6B1278D3F5100A95FFE /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06182690278D3E59006FD930 /* libavfilter.a */; };
+		064ED6B2278D3F5100A95FFE /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06182693278D3E59006FD930 /* libavformat.a */; };
+		064ED6B3278D3F5100A95FFE /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0618268F278D3E59006FD930 /* libavutil.a */; };
+		064ED6B4278D3F5100A95FFE /* libopencv_world.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0618268E278D3E59006FD930 /* libopencv_world.a */; };
+		064ED6B6278D3F5100A95FFE /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06182698278D3E59006FD930 /* libswscale.a */; };
+		064ED6B8278D3F5100A95FFE /* libZipper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06182692278D3E59006FD930 /* libZipper.a */; };
+		06508EED278F054800D10D9F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06508EEC278F054800D10D9F /* CoreMedia.framework */; };
+		06508EF0278F062F00D10D9F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E0D532278F02700083EF44 /* AudioToolbox.framework */; };
+		06508EF2278F087200D10D9F /* test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 06508EF1278F087200D10D9F /* test.mp4 */; };
+		06508EF4278F0C6200D10D9F /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06508EF3278F0C6200D10D9F /* libx264.a */; };
+		06509546278FD91F00D10D9F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 063095AB27870A8F00587B7E /* AVFoundation.framework */; };
+		06CB5563278D626600CC8436 /* libMNN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06CB5562278D626600CC8436 /* libMNN.a */; };
+		06E0CEDC278EA9380083EF44 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E0CEDB278EA9380083EF44 /* libswresample.a */; };
+		06E0D52F278EF2EB0083EF44 /* rec_int8.mnn in Resources */ = {isa = PBXBuildFile; fileRef = 06E0D52E278EF2EB0083EF44 /* rec_int8.mnn */; };
+		06E0D531278EF32D0083EF44 /* libvak.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E0D530278EF32D0083EF44 /* libvak.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0630958A2787078C00587B7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 063095662787078A00587B7E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0630956D2787078A00587B7E;
+			remoteInfo = EdfuVideoHandler;
+		};
+		063095942787078C00587B7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 063095662787078A00587B7E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0630956D2787078A00587B7E;
+			remoteInfo = EdfuVideoHandler;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06182681278D3B9A006FD930 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		06182685278D3D31006FD930 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		06182687278D3D40006FD930 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		0618268C278D3E59006FD930 /* video_processor_interface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = video_processor_interface.h; sourceTree = "<group>"; };
+		0618268E278D3E59006FD930 /* libopencv_world.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopencv_world.a; sourceTree = "<group>"; };
+		0618268F278D3E59006FD930 /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavutil.a; sourceTree = "<group>"; };
+		06182690278D3E59006FD930 /* libavfilter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavfilter.a; sourceTree = "<group>"; };
+		06182691278D3E59006FD930 /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavcodec.a; sourceTree = "<group>"; };
+		06182692278D3E59006FD930 /* libZipper.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libZipper.a; sourceTree = "<group>"; };
+		06182693278D3E59006FD930 /* libavformat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavformat.a; sourceTree = "<group>"; };
+		06182695278D3E59006FD930 /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavdevice.a; sourceTree = "<group>"; };
+		06182698278D3E59006FD930 /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswscale.a; sourceTree = "<group>"; };
+		0630956E2787078A00587B7E /* EdfuVideoHandler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EdfuVideoHandler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		063095712787078A00587B7E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		063095722787078A00587B7E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		063095742787078A00587B7E /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		063095752787078A00587B7E /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		063095772787078A00587B7E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		063095782787078A00587B7E /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		0630957B2787078A00587B7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0630957D2787078C00587B7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		063095802787078C00587B7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		063095822787078C00587B7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		063095832787078C00587B7E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		063095892787078C00587B7E /* EdfuVideoHandlerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EdfuVideoHandlerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0630958D2787078C00587B7E /* EdfuVideoHandlerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EdfuVideoHandlerTests.m; sourceTree = "<group>"; };
+		063095932787078C00587B7E /* EdfuVideoHandlerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EdfuVideoHandlerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		063095972787078D00587B7E /* EdfuVideoHandlerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EdfuVideoHandlerUITests.m; sourceTree = "<group>"; };
+		063095992787078D00587B7E /* EdfuVideoHandlerUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EdfuVideoHandlerUITestsLaunchTests.m; sourceTree = "<group>"; };
+		063095AB27870A8F00587B7E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		06508EEC278F054800D10D9F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		06508EEE278F060400D10D9F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		06508EF1278F087200D10D9F /* test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.mp4; sourceTree = "<group>"; };
+		06508EF3278F0C6200D10D9F /* libx264.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libx264.a; sourceTree = "<group>"; };
+		06CB5562278D626600CC8436 /* libMNN.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMNN.a; sourceTree = "<group>"; };
+		06CB584A278D799800CC8436 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		06CB584C278D79AE00CC8436 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
+		06CB5850278D7B1400CC8436 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
+		06CB5852278D7BA500CC8436 /* libpthread.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libpthread.tbd; path = usr/lib/libpthread.tbd; sourceTree = SDKROOT; };
+		06E0CEDB278EA9380083EF44 /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswresample.a; sourceTree = "<group>"; };
+		06E0D52D278EF2B00083EF44 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		06E0D52E278EF2EB0083EF44 /* rec_int8.mnn */ = {isa = PBXFileReference; lastKnownFileType = file; path = rec_int8.mnn; sourceTree = "<group>"; };
+		06E0D530278EF32D0083EF44 /* libvak.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libvak.a; sourceTree = "<group>"; };
+		06E0D532278F02700083EF44 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0630956B2787078A00587B7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06509546278FD91F00D10D9F /* AVFoundation.framework in Frameworks */,
+				06E0D531278EF32D0083EF44 /* libvak.a in Frameworks */,
+				064ED6AF278D3F5100A95FFE /* libavcodec.a in Frameworks */,
+				064ED6B0278D3F5100A95FFE /* libavdevice.a in Frameworks */,
+				064ED6B1278D3F5100A95FFE /* libavfilter.a in Frameworks */,
+				064ED6B2278D3F5100A95FFE /* libavformat.a in Frameworks */,
+				064ED6B3278D3F5100A95FFE /* libavutil.a in Frameworks */,
+				06508EF4278F0C6200D10D9F /* libx264.a in Frameworks */,
+				064ED6B4278D3F5100A95FFE /* libopencv_world.a in Frameworks */,
+				06E0CEDC278EA9380083EF44 /* libswresample.a in Frameworks */,
+				064ED6B6278D3F5100A95FFE /* libswscale.a in Frameworks */,
+				064ED6B8278D3F5100A95FFE /* libZipper.a in Frameworks */,
+				06CB5563278D626600CC8436 /* libMNN.a in Frameworks */,
+				06182686278D3D31006FD930 /* libbz2.tbd in Frameworks */,
+				06182688278D3D40006FD930 /* libiconv.tbd in Frameworks */,
+				06182682278D3B9A006FD930 /* VideoToolbox.framework in Frameworks */,
+				06508EF0278F062F00D10D9F /* AudioToolbox.framework in Frameworks */,
+				06508EED278F054800D10D9F /* CoreMedia.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		063095862787078C00587B7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		063095902787078C00587B7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06182689278D3E59006FD930 /* AlgorithmModule */ = {
+			isa = PBXGroup;
+			children = (
+				0618268A278D3E59006FD930 /* include */,
+				0618268D278D3E59006FD930 /* lib */,
+				06182699278D3E59006FD930 /* Resource */,
+			);
+			path = AlgorithmModule;
+			sourceTree = "<group>";
+		};
+		0618268A278D3E59006FD930 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				06E0D52D278EF2B00083EF44 /* common.h */,
+				0618268C278D3E59006FD930 /* video_processor_interface.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		0618268D278D3E59006FD930 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				06508EF3278F0C6200D10D9F /* libx264.a */,
+				06E0D530278EF32D0083EF44 /* libvak.a */,
+				06E0CEDB278EA9380083EF44 /* libswresample.a */,
+				0618268E278D3E59006FD930 /* libopencv_world.a */,
+				0618268F278D3E59006FD930 /* libavutil.a */,
+				06182690278D3E59006FD930 /* libavfilter.a */,
+				06182691278D3E59006FD930 /* libavcodec.a */,
+				06182692278D3E59006FD930 /* libZipper.a */,
+				06182693278D3E59006FD930 /* libavformat.a */,
+				06CB5562278D626600CC8436 /* libMNN.a */,
+				06182695278D3E59006FD930 /* libavdevice.a */,
+				06182698278D3E59006FD930 /* libswscale.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		06182699278D3E59006FD930 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				06E0D52E278EF2EB0083EF44 /* rec_int8.mnn */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		063095652787078A00587B7E = {
+			isa = PBXGroup;
+			children = (
+				063095702787078A00587B7E /* EdfuVideoHandler */,
+				0630958C2787078C00587B7E /* EdfuVideoHandlerTests */,
+				063095962787078D00587B7E /* EdfuVideoHandlerUITests */,
+				0630956F2787078A00587B7E /* Products */,
+				063095AA27870A8F00587B7E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0630956F2787078A00587B7E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0630956E2787078A00587B7E /* EdfuVideoHandler.app */,
+				063095892787078C00587B7E /* EdfuVideoHandlerTests.xctest */,
+				063095932787078C00587B7E /* EdfuVideoHandlerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		063095702787078A00587B7E /* EdfuVideoHandler */ = {
+			isa = PBXGroup;
+			children = (
+				063095A6278707F900587B7E /* VideoEditor */,
+				063095712787078A00587B7E /* AppDelegate.h */,
+				063095722787078A00587B7E /* AppDelegate.m */,
+				063095742787078A00587B7E /* SceneDelegate.h */,
+				063095752787078A00587B7E /* SceneDelegate.m */,
+				063095772787078A00587B7E /* ViewController.h */,
+				063095782787078A00587B7E /* ViewController.mm */,
+				0630957A2787078A00587B7E /* Main.storyboard */,
+				0630957D2787078C00587B7E /* Assets.xcassets */,
+				0630957F2787078C00587B7E /* LaunchScreen.storyboard */,
+				063095822787078C00587B7E /* Info.plist */,
+				063095832787078C00587B7E /* main.m */,
+			);
+			path = EdfuVideoHandler;
+			sourceTree = "<group>";
+		};
+		0630958C2787078C00587B7E /* EdfuVideoHandlerTests */ = {
+			isa = PBXGroup;
+			children = (
+				0630958D2787078C00587B7E /* EdfuVideoHandlerTests.m */,
+			);
+			path = EdfuVideoHandlerTests;
+			sourceTree = "<group>";
+		};
+		063095962787078D00587B7E /* EdfuVideoHandlerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				063095972787078D00587B7E /* EdfuVideoHandlerUITests.m */,
+				063095992787078D00587B7E /* EdfuVideoHandlerUITestsLaunchTests.m */,
+			);
+			path = EdfuVideoHandlerUITests;
+			sourceTree = "<group>";
+		};
+		063095A6278707F900587B7E /* VideoEditor */ = {
+			isa = PBXGroup;
+			children = (
+				06182689278D3E59006FD930 /* AlgorithmModule */,
+				06508EF1278F087200D10D9F /* test.mp4 */,
+			);
+			path = VideoEditor;
+			sourceTree = "<group>";
+		};
+		063095AA27870A8F00587B7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06508EEE278F060400D10D9F /* libz.tbd */,
+				06508EEC278F054800D10D9F /* CoreMedia.framework */,
+				06E0D532278F02700083EF44 /* AudioToolbox.framework */,
+				06CB5852278D7BA500CC8436 /* libpthread.tbd */,
+				06CB5850278D7B1400CC8436 /* libc++.1.tbd */,
+				06CB584C278D79AE00CC8436 /* libc++abi.tbd */,
+				06CB584A278D799800CC8436 /* libc++.tbd */,
+				06182687278D3D40006FD930 /* libiconv.tbd */,
+				06182685278D3D31006FD930 /* libbz2.tbd */,
+				06182681278D3B9A006FD930 /* VideoToolbox.framework */,
+				063095AB27870A8F00587B7E /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0630956D2787078A00587B7E /* EdfuVideoHandler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0630959D2787078D00587B7E /* Build configuration list for PBXNativeTarget "EdfuVideoHandler" */;
+			buildPhases = (
+				0630956A2787078A00587B7E /* Sources */,
+				0630956B2787078A00587B7E /* Frameworks */,
+				0630956C2787078A00587B7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EdfuVideoHandler;
+			productName = EdfuVideoHandler;
+			productReference = 0630956E2787078A00587B7E /* EdfuVideoHandler.app */;
+			productType = "com.apple.product-type.application";
+		};
+		063095882787078C00587B7E /* EdfuVideoHandlerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 063095A02787078D00587B7E /* Build configuration list for PBXNativeTarget "EdfuVideoHandlerTests" */;
+			buildPhases = (
+				063095852787078C00587B7E /* Sources */,
+				063095862787078C00587B7E /* Frameworks */,
+				063095872787078C00587B7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0630958B2787078C00587B7E /* PBXTargetDependency */,
+			);
+			name = EdfuVideoHandlerTests;
+			productName = EdfuVideoHandlerTests;
+			productReference = 063095892787078C00587B7E /* EdfuVideoHandlerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		063095922787078C00587B7E /* EdfuVideoHandlerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 063095A32787078D00587B7E /* Build configuration list for PBXNativeTarget "EdfuVideoHandlerUITests" */;
+			buildPhases = (
+				0630958F2787078C00587B7E /* Sources */,
+				063095902787078C00587B7E /* Frameworks */,
+				063095912787078C00587B7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				063095952787078C00587B7E /* PBXTargetDependency */,
+			);
+			name = EdfuVideoHandlerUITests;
+			productName = EdfuVideoHandlerUITests;
+			productReference = 063095932787078C00587B7E /* EdfuVideoHandlerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		063095662787078A00587B7E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					0630956D2787078A00587B7E = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					063095882787078C00587B7E = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 0630956D2787078A00587B7E;
+					};
+					063095922787078C00587B7E = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 0630956D2787078A00587B7E;
+					};
+				};
+			};
+			buildConfigurationList = 063095692787078A00587B7E /* Build configuration list for PBXProject "EdfuVideoHandler" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 063095652787078A00587B7E;
+			productRefGroup = 0630956F2787078A00587B7E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0630956D2787078A00587B7E /* EdfuVideoHandler */,
+				063095882787078C00587B7E /* EdfuVideoHandlerTests */,
+				063095922787078C00587B7E /* EdfuVideoHandlerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0630956C2787078A00587B7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06508EF2278F087200D10D9F /* test.mp4 in Resources */,
+				063095812787078C00587B7E /* LaunchScreen.storyboard in Resources */,
+				0630957E2787078C00587B7E /* Assets.xcassets in Resources */,
+				0630957C2787078A00587B7E /* Main.storyboard in Resources */,
+				06E0D52F278EF2EB0083EF44 /* rec_int8.mnn in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		063095872787078C00587B7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		063095912787078C00587B7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0630956A2787078A00587B7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				063095792787078A00587B7E /* ViewController.mm in Sources */,
+				063095732787078A00587B7E /* AppDelegate.m in Sources */,
+				063095842787078C00587B7E /* main.m in Sources */,
+				063095762787078A00587B7E /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		063095852787078C00587B7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0630958E2787078C00587B7E /* EdfuVideoHandlerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0630958F2787078C00587B7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				063095982787078D00587B7E /* EdfuVideoHandlerUITests.m in Sources */,
+				0630959A2787078D00587B7E /* EdfuVideoHandlerUITestsLaunchTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0630958B2787078C00587B7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0630956D2787078A00587B7E /* EdfuVideoHandler */;
+			targetProxy = 0630958A2787078C00587B7E /* PBXContainerItemProxy */;
+		};
+		063095952787078C00587B7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0630956D2787078A00587B7E /* EdfuVideoHandler */;
+			targetProxy = 063095942787078C00587B7E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0630957A2787078A00587B7E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0630957B2787078A00587B7E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0630957F2787078C00587B7E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				063095802787078C00587B7E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0630959B2787078D00587B7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0630959C2787078D00587B7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0630959E2787078D00587B7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 92QHFVMHAM;
+				ENABLE_BITCODE = NO;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = EdfuVideoHandler/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EdfuVideoHandler/VideoEditor/algorithmModule/lib",
+					"$(PROJECT_DIR)/EdfuVideoHandler/VideoEditor/AlgorithmModule/lib",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"'-std=c++14'",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.EdfuVideoHandler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0630959F2787078D00587B7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 92QHFVMHAM;
+				ENABLE_BITCODE = NO;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EdfuVideoHandler/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EdfuVideoHandler/VideoEditor/algorithmModule/lib",
+					"$(PROJECT_DIR)/EdfuVideoHandler/VideoEditor/AlgorithmModule/lib",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.EdfuVideoHandler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		063095A12787078D00587B7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.EdfuVideoHandlerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EdfuVideoHandler.app/EdfuVideoHandler";
+			};
+			name = Debug;
+		};
+		063095A22787078D00587B7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.EdfuVideoHandlerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EdfuVideoHandler.app/EdfuVideoHandler";
+			};
+			name = Release;
+		};
+		063095A42787078D00587B7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.EdfuVideoHandlerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EdfuVideoHandler;
+			};
+			name = Debug;
+		};
+		063095A52787078D00587B7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.EdfuVideoHandlerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EdfuVideoHandler;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		063095692787078A00587B7E /* Build configuration list for PBXProject "EdfuVideoHandler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0630959B2787078D00587B7E /* Debug */,
+				0630959C2787078D00587B7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0630959D2787078D00587B7E /* Build configuration list for PBXNativeTarget "EdfuVideoHandler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0630959E2787078D00587B7E /* Debug */,
+				0630959F2787078D00587B7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		063095A02787078D00587B7E /* Build configuration list for PBXNativeTarget "EdfuVideoHandlerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				063095A12787078D00587B7E /* Debug */,
+				063095A22787078D00587B7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		063095A32787078D00587B7E /* Build configuration list for PBXNativeTarget "EdfuVideoHandlerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				063095A42787078D00587B7E /* Debug */,
+				063095A52787078D00587B7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 063095662787078A00587B7E /* Project object */;
+}
