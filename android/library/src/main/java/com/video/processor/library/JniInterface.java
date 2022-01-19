@@ -2,6 +2,8 @@ package com.video.processor.library;
 
 import android.content.Context;
 
+import androidx.annotation.NonNull;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -51,14 +53,14 @@ public class JniInterface {
         return handle;
     }
 
-    public int open(String inputVideoPath,
-                    String outputPath,
-                    String uuid,
+    public int open(@NonNull String inputVideoPath,
+                    @NonNull String outputPath,
+                    @NonNull String uuid,
                     int outputWidth,
                     int outputHeight,
-                    String idx,
+                    @NonNull String idx,
                     int layoutType,
-                    String source) {
+                    @NonNull String source) {
         return nOpen(handle, modelPath, inputVideoPath, outputPath, uuid, outputWidth, outputHeight, idx, layoutType, source);
     }
 
