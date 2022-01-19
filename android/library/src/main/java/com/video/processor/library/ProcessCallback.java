@@ -11,7 +11,8 @@ public interface ProcessCallback {
     void progress(int frameFinished, float progress);
 
     /**
-     * @param success 处理结果
+     * @param code see {@link com.video.processor.library.ProcessorError.Code}
+     * @param messge see {@link com.video.processor.library.ProcessorError.Message}
      */
-    void finish(boolean success);
+    void finish(int code, String messge);
 }

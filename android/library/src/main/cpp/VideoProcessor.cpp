@@ -20,12 +20,14 @@ Java_com_video_processor_library_JniInterface_nOpen(JNIEnv *env, jobject thiz, j
                                                    jstring jidx, jint layout_type,
                                                    jstring jsource) {
     auto videoProcessorInterface = (vak::VideoProcessorInterface *) handle;
-    std::string model_path = env->GetStringUTFChars(jmodel_path, nullptr);
-    std::string input_video_path = env->GetStringUTFChars(jinput_video_path, nullptr);
-    std::string output_path = env->GetStringUTFChars(joutput_path, nullptr);
-    std::string uuid = env->GetStringUTFChars(juuid, nullptr);
-    std::string idx = env->GetStringUTFChars(jidx, nullptr);
-    std::string source = env->GetStringUTFChars(jsource, nullptr);
+    const char *model_path = env->GetStringUTFChars(jmodel_path, nullptr);
+    const char *input_video_path = env->GetStringUTFChars(jinput_video_path, nullptr);
+    const char *output_path = env->GetStringUTFChars(joutput_path, nullptr);
+    const char *uuid = env->GetStringUTFChars(juuid, nullptr);
+    const char *idx = env->GetStringUTFChars(jidx, nullptr);
+    const char *source = env->GetStringUTFChars(jsource, nullptr);
+    __android_log_print(ANDROID_LOG_DEBUG, TAG, "model_path:%s, input_video_path:%s, output_path:%s, uuid:%s, idx:%s, source:%s",
+                        model_path, input_video_path, output_path, uuid, idx, source);
     vak::Status status = videoProcessorInterface->open(model_path, input_video_path, output_path,
                                                        uuid, output_width, output_height, idx,
                                                        layout_type, source);

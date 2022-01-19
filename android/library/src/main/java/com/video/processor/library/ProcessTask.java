@@ -11,9 +11,9 @@ import java.io.File;
  * date:2022/1/13
  **/
 public class ProcessTask implements Runnable {
-    private ProcessConfig config;
-    private ProcessCallback callback;
-    private Context context;
+    private final ProcessConfig config;
+    private final ProcessCallback callback;
+    private final Context context;
 
     @Keep
     public void progress(int frame, float progress) {
@@ -24,21 +24,45 @@ public class ProcessTask implements Runnable {
         this.context = context;
         this.config = config;
         this.callback = callback;
-        File outputDir = new File(config.outputPath);
-        if (!outputDir.exists()) {
-            outputDir.mkdirs();
-        }
     }
 
     @Override
     public void run() {
+        if (!checkInputFile()) {
+            callback.finish(ProcessorError.Code.INPUT_PATH_ERROR, ProcessorError.Message.INPUT_PATH_ERROR);
+            return;
+        }
+        if (!checkOutputFile()) {
+            callback.finish(ProcessorError.Code.OUTPUT_PATH_ERROR, ProcessorError.Message.OUTPUT_PATH_ERROR);
+            return;
+        }
+        if (!checkNonNull(config.taskId)) {
+            callback.finish(ProcessorError.Code.TASK_ID_ERROR, ProcessorError.Message.TASK_ID_ERROR);
+            return;
+        }
+        if (!checkNonNull(config.source)) {
+            callback.finish(ProcessorError.Code.SOURCE_ERROR, ProcessorError.Message.SOURCE_ERROR);
+            return;
+        }
+        if (!checkNonNull(config.idx)) {
+            callback.finish(ProcessorError.Code.IDX_ERROR, ProcessorError.Message.IDX_ERROR);
+            return;
+        }
+        if (!checkOutputSize(config.outputWidth)) {
+            callback.finish(ProcessorError.Code.OUTPUT_WIDTH_ERROR, ProcessorError.Message.OUTPUT_WIDTH_ERROR);
+            return;
+        }
+        if (!checkOutputSize(config.outputHeight)) {
+            callback.finish(ProcessorError.Code.OUTPUT_HEIGHT_ERROR, ProcessorError.Message.OUTPUT_HEIGHT_ERROR);
+            return;
+        }
         JniInterface jniInterface = new JniInterface(context);
         long handle = jniInterface.init();
         if (handle == 0) {
-            callback.finish(false);
+            callback.finish(ProcessorError.Code.INIT_ERROR, ProcessorError.Message.INIT_ERROR);
             return;
         }
-        int status = jniInterface.open(
+        if (jniInterface.open(
                 config.inputVideoPath,
                 config.outputPath,
                 config.taskId,
@@ -46,13 +70,39 @@ public class ProcessTask implements Runnable {
                 config.outputHeight,
                 config.idx,
                 config.layoutType,
-                config.source);
-        if (status != 0) {
-            callback.finish(false);
+                config.source) != 0) {
+            callback.finish(ProcessorError.Code.OPEN_ERROR, ProcessorError.Message.OPEN_ERROR);
             return;
         }
-        jniInterface.process(this);
+        if (jniInterface.process(this) != 0) {
+            callback.finish(ProcessorError.Code.PROCESS_ERROR, ProcessorError.Message.PROCESS_ERROR);
+        } else {
+            callback.finish(ProcessorError.Code.SUCCESS, ProcessorError.Message.success);
+        }
         jniInterface.close();
-        callback.finish(true);
+    }
+
+    private boolean checkInputFile() {
+        File f = new File(config.inputVideoPath);
+        return f.exists() && f.canRead();
+    }
+
+    private boolean checkOutputFile() {
+        File outputDir = new File(config.outputPath);
+        if (!outputDir.exists() && !outputDir.mkdirs()) {
+            return false;
+        }
+        return outputDir.canWrite();
+    }
+
+    private boolean checkNonNull(String params) {
+        return params != null;
+    }
+
+    private boolean checkOutputSize(int size) {
+        if (size == 0) {
+            return false;
+        }
+        return (size & 1) == 0;
     }
 }

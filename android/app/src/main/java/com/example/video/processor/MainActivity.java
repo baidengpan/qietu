@@ -20,6 +20,7 @@ import android.widget.Toast;
 import com.video.processor.library.ProcessCallback;
 import com.video.processor.library.ProcessConfig;
 import com.video.processor.library.ProcessTask;
+import com.video.processor.library.ProcessorError;
 import com.video.processor.library.ProviderUtils;
 
 import java.util.concurrent.Executors;
@@ -130,12 +131,13 @@ public class MainActivity extends AppCompatActivity implements ProcessCallback {
     }
 
     @Override
-    public void finish(boolean success) {
+    public void finish(int code, String message) {
         runOnUiThread(() -> {
+            boolean success = code == ProcessorError.Code.SUCCESS;
             if (success) {
                 outputTv.setText(Environment.getExternalStoragePublicDirectory(OUTPUT_DIR).getAbsolutePath());
             }
-            String result = String.format("result:%s, 耗时%d秒", success ? "success" : "failed", (System.currentTimeMillis() - startTime) / 1000);
+            String result = String.format("result:%s, 耗时%d秒", success ? "success" : "failed," + message, (System.currentTimeMillis() - startTime) / 1000);
             resultTv.setText(result);
         });
     }
