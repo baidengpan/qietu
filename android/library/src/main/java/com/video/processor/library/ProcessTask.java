@@ -77,7 +77,7 @@ public class ProcessTask implements Runnable {
         if (jniInterface.process(this) != 0) {
             callback.finish(ProcessorError.Code.PROCESS_ERROR, ProcessorError.Message.PROCESS_ERROR);
         } else {
-            callback.finish(ProcessorError.Code.SUCCESS, ProcessorError.Message.success);
+            callback.finish(ProcessorError.Code.SUCCESS, ProcessorError.Message.SUCCESS);
         }
         jniInterface.close();
     }

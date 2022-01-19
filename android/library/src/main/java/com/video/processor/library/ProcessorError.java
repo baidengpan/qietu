@@ -1,7 +1,6 @@
 package com.video.processor.library;
 
 /**
- * author:baidengpan
  * date:2022/1/19
  **/
 public interface ProcessorError {
@@ -23,7 +22,7 @@ public interface ProcessorError {
     }
 
     interface Message {
-        String success = "success";
+        String SUCCESS = "success";
 
         //参数错误
         String INPUT_PATH_ERROR = "input file not exist or has no permission to read";
