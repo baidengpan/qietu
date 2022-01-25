@@ -12,7 +12,7 @@ import java.io.InputStream;
  * date:2022/1/13
  **/
 public class JniInterface {
-    private static final String MODEL_FILE = "model/recorder_int8.mnn";
+    private static final String MODEL_FILE = "model/recorder_fp16.mnn";
     private Context context;
     private String modelPath;
     private long handle;
@@ -41,7 +41,7 @@ public class JniInterface {
             }
         }
         try {
-            InputStream is = context.getAssets().open("model/recorder_int8.mnn");
+            InputStream is = context.getAssets().open(MODEL_FILE);
             ModelUtils.copyToFile(is, file);
         } catch (IOException e) {
             e.printStackTrace();
