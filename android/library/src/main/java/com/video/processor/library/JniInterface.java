@@ -27,7 +27,7 @@ public class JniInterface {
     }
 
 
-    private void copyModelToFileIfNeeded() {
+    private synchronized void copyModelToFileIfNeeded() {
         File file = new File(context.getFilesDir(), MODEL_FILE);
         modelPath = file.getAbsolutePath();
         if (file.exists()) {
