@@ -12,7 +12,7 @@ public interface ProcessCallback {
 
     /**
      * @param code see {@link com.video.processor.library.ProcessorError.Code}
-     * @param messge see {@link com.video.processor.library.ProcessorError.Message}
+     * @param message see {@link com.video.processor.library.ProcessorError.Message}
      */
-    void finish(int code, String messge);
+    void finish(int code, String message);
 }
